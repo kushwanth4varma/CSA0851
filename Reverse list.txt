@@ -1,0 +1,8 @@
+def reverse_list(my_list):
+    reversed_list = []
+    for i in range(len(my_list) - 1, -1, -1):
+        reversed_list.append(my_list[i])
+    return reversed_list
+
+my_list = ["this", "is", "a", "test"]
+print(reverse_list(my_list))  # Output: ["test", "a", "is", "this"]

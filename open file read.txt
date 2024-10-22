@@ -1,0 +1,16 @@
+
+def open_file_modes(file_name):
+    # Read mode
+    with open(file_name, 'r') as file:
+        print("Read Mode:")
+        print(file.read())
+    
+    # Write mode
+    with open(file_name, 'w') as file:
+        file.write("Hello, World!")
+    
+    # Append mode
+    with open(file_name, 'a') as file:
+        file.write("\nAppended text.")
+
+open_file_modes('example.txt')

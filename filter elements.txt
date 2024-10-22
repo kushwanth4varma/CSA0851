@@ -1,0 +1,6 @@
+def filter_above_average(my_list):
+    average = sum(my_list) / len(my_list)
+    return [num for num in my_list if num > average]
+
+my_list = [1, 2, 3, 4, 5]
+print(filter_above_average(my_list))  # Output: [4, 5]

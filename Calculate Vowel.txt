@@ -1,0 +1,21 @@
+def calculate_vowel_consonant_percentage(file_name):
+    vowel_count = 0
+    consonant_count = 0
+    
+    with open(file_name, 'r') as file:
+        for line in file:
+            for char in line:
+                if char.isalpha():
+                    if char.lower() in 'aeiou':
+                        vowel_count += 1
+                    else:
+                        consonant_count += 1
+    
+    total_chars = vowel_count + consonant_count
+    vowel_percentage = (vowel_count / total_chars) * 100
+    consonant_percentage = (consonant_count / total_chars) * 100
+    
+    print(f"Vowel Percentage: {vowel_percentage}%")
+    print(f"Consonant Percentage: {consonant_percentage}%")
+
+calculate_vowel_consonant_percentage('source.txt')

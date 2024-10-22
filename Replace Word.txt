@@ -1,0 +1,10 @@
+def replace_word_phrase(input_file, output_file, old_word, new_word):
+    with open(input_file, 'r') as file:
+        content = file.read()
+    
+    content = content.replace(old_word, new_word)
+    
+    with open(output_file, 'w') as file:
+        file.write(content)
+
+replace_word_phrase('source.txt', 'modified.txt', 'old_word', 'new_word'
