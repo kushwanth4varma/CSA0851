@@ -1,0 +1,10 @@
+def print_numbers_except_digit(p, q, r):
+    result = [i for i in range(p, q+1) if str(r) not in str(i)]
+    print(f"Numbers are = {', '.join(map(str, result))}")
+
+test_cases = [(60, 70, 3), (200, 200, 5), (100, 200, 0), (-100, 100, 5), (1073, 1075, 4), (444, 499, 4)]
+
+for p, q, r in test_cases:
+    print(f"P = {p}, Q = {q}, R = {r}")
+    print_numbers_except_digit(p, q, r)
+    print()
